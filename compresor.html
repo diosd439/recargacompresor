@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recarga de Compresores de Aire en Toda Colombia</title>
+  <meta name="description" content="Recarga, mantenimiento, reparación, instalación, diagnóstico técnico y venta de repuestos para compresores de aire en toda Colombia. WhatsApp 3102995655." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', sans-serif; background: #080808; color: #fff; line-height: 1.6; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    p { color: #d6d6d6; }
+    .hero { min-height: 100vh; background: radial-gradient(circle at 80% 15%, rgba(255, 0, 0, .36), transparent 28%), radial-gradient(circle at 15% 90%, rgba(180, 0, 0, .28), transparent 32%), linear-gradient(135deg, #050505 0%, #141414 58%, #320000 100%); padding: 24px 7%; position: relative; }
+    .hero::after { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 48px 48px; opacity: .35; pointer-events: none; }
+    .nav, .hero-content { position: relative; z-index: 1; }
+    .nav { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 900; font-size: 19px; }
+    .brand-icon { width: 44px; height: 44px; display: grid; place-items: center; background: #df0000; border-radius: 50%; box-shadow: 0 0 30px rgba(217,0,0,.7); }
+    .nav-links { display: flex; align-items: center; gap: 20px; font-weight: 700; font-size: 14px; }
+    .nav-links a:hover { color: #ff3a3a; }
+    .menu-btn { display: none; background: none; border: 0; color: white; font-size: 28px; cursor: pointer; }
+    .hero-content { display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; gap: 46px; padding: 94px 0 40px; }
+    .eyebrow { color: #ff3636; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 14px; }
+    h1 { font-size: clamp(42px, 7vw, 78px); line-height: 1.02; max-width: 930px; letter-spacing: -2px; }
+    h2 { font-size: clamp(30px, 4vw, 48px); margin-bottom: 16px; line-height: 1.1; }
+    h3 { line-height: 1.2; }
+    .subtitle { max-width: 760px; font-size: 20px; margin: 24px 0 34px; }
+    .btn { display: inline-block; background: #e00000; color: white; padding: 15px 24px; border-radius: 999px; font-weight: 900; box-shadow: 0 12px 30px rgba(224,0,0,.35); transition: .25s; border: 0; cursor: pointer; font-family: inherit; }
+    .btn:hover { transform: translateY(-3px); background: #ff1f1f; }
+    .btn.secondary { background: transparent; border: 1px solid #ff3333; box-shadow: none; }
+    .btn.dark { background: #050505; box-shadow: none; }
+    .btn.small { padding: 10px 18px; }
+    .hero-actions, .actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-card, .location-box, .form-box { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14); border-radius: 28px; padding: 32px; backdrop-filter: blur(12px); box-shadow: 0 30px 80px rgba(0,0,0,.35); }
+    .hero-card h3, .location-box h3 { font-size: 28px; margin-bottom: 12px; }
+    ul { list-style: none; margin-top: 18px; }
+    li { margin: 9px 0; color: #f2f2f2; }
+    .section { padding: 86px 7%; }
+    .section.alt { background: #0d0d0d; }
+    .intro { max-width: 760px; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px; }
+    .cards.two { grid-template-columns: repeat(2, 1fr); }
+    .card { background: #111; border: 1px solid #252525; border-radius: 24px; padding: 30px; transition: .25s; position: relative; overflow: hidden; }
+    .card::before { content: ''; position: absolute; left: 0; top: 0; width: 5px; height: 100%; background: #e00000; opacity: .85; }
+    .card:hover { transform: translateY(-8px); border-color: #e00000; box-shadow: 0 20px 55px rgba(224,0,0,.18); }
+    .icon { font-size: 36px; margin-bottom: 18px; }
+    .card h3 { font-size: 22px; margin-bottom: 12px; }
+    .split { margin: 0 7% 86px; padding: 60px; background: linear-gradient(135deg, #121212, #270000); border-radius: 34px; display: grid; grid-template-columns: 1fr .8fr; gap: 40px; align-items: center; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 26px; }
+    .stats div { background: rgba(255,255,255,.08); border-radius: 18px; padding: 18px; }
+    .stats strong { display: block; font-size: 28px; color: #ff3333; }
+    .stats span { font-size: 13px; color: #ccc; }
+    .steps { counter-reset: step; display: grid; gap: 18px; margin-top: 32px; }
+    .step { counter-increment: step; display: grid; grid-template-columns: 58px 1fr; gap: 18px; background: #111; border: 1px solid #262626; border-radius: 22px; padding: 22px; }
+    .step::before { content: counter(step); width: 48px; height: 48px; display: grid; place-items: center; border-radius: 50%; background: #e00000; font-weight: 900; box-shadow: 0 0 25px rgba(224,0,0,.35); }
+    .faq { margin-top: 30px; display: grid; gap: 14px; }
+    details { background: #111; border: 1px solid #292929; border-radius: 18px; padding: 20px; }
+    summary { cursor: pointer; font-weight: 800; color: #fff; }
+    details p { margin-top: 12px; }
+    .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 28px; margin-top: 30px; }
+    input, select, textarea { width: 100%; margin-bottom: 14px; padding: 14px 16px; border-radius: 14px; border: 1px solid #333; background: #0a0a0a; color: white; font-family: inherit; outline: none; }
+    input:focus, select:focus, textarea:focus { border-color: #e00000; }
+    textarea { min-height: 130px; resize: vertical; }
+    .cta { margin: 0 7% 70px; padding: 70px 30px; text-align: center; background: #e00000; border-radius: 32px; }
+    .cta p { color: white; margin-bottom: 24px; }
+    .floating-whatsapp { position: fixed; right: 22px; bottom: 22px; z-index: 10; background: #25D366; color: white; padding: 14px 20px; border-radius: 999px; font-weight: 900; box-shadow: 0 12px 35px rgba(0,0,0,.35); }
+    footer { text-align: center; padding: 28px; color: #aaa; border-top: 1px solid #202020; }
+
+    .brand-icon i { font-size: 20px; }
+    .btn i, .floating-whatsapp i, li i { margin-right: 8px; }
+    .icon i { color: #ff3333; }
+
+    @media (max-width: 950px) {
+      .menu-btn { display: block; }
+      .nav-links { display: none; position: absolute; top: 78px; left: 7%; right: 7%; flex-direction: column; background: #111; padding: 24px; border-radius: 22px; border: 1px solid #333; z-index: 5; }
+      .nav-links.active { display: flex; }
+      .hero-content, .cards, .cards.two, .split, .contact-grid { grid-template-columns: 1fr; }
+      .hero-content { padding-top: 70px; }
+      .split { padding: 34px; }
+      .stats { grid-template-columns: 1fr; }
+      h1 { letter-spacing: -1px; }
+    }
+  </style>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <header class="hero" id="inicio">
+    <nav class="nav">
+      <div class="brand">
+        <span class="brand-icon"><i class="fas fa-gears"></i></span>
+        <span>Recarga Compresores de Aire</span>
+      </div>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
+      <div class="nav-links" id="navLinks">
+        <a href="#servicios">Servicios</a>
+        <a href="#cobertura">Cobertura</a>
+        <a href="#solicitar">Solicitar</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn small" href="https://wa.me/573102995655" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </nav>
+
+    <section class="hero-content">
+      <div>
+        <p class="eyebrow">Servicio técnico especializado</p>
+        <h1>Recarga de compresores de aire en toda Colombia</h1>
+        <p class="subtitle">Recarga, mantenimiento, reparación, instalación, diagnóstico técnico y venta de repuestos para compresores de aire industriales, comerciales y profesionales.</p>
+        <div class="hero-actions">
+          <a class="btn" href="https://wa.me/573102995655?text=Hola%2C%20quiero%20cotizar%20un%20servicio%20para%20compresor%20de%20aire" target="_blank"><i class="fab fa-whatsapp"></i> Cotizar por WhatsApp</a>
+          <a class="btn secondary" href="#servicios">Ver servicios</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Atención rápida y técnica</h3>
+        <p>Soluciones para empresas, talleres, industrias, comercios y usuarios profesionales.</p>
+        <ul>
+          <li><i class="fas fa-check"></i> Recarga de compresores</li>
+          <li><i class="fas fa-check"></i> Mantenimiento y reparación</li>
+          <li><i class="fas fa-check"></i> Instalación y diagnóstico</li>
+          <li><i class="fas fa-check"></i> Repuestos y accesorios</li>
+          <li><i class="fas fa-check"></i> Cobertura en Colombia</li>
+        </ul>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section" id="servicios">
+      <p class="eyebrow">Lo que hacemos</p>
+      <h2>Servicios profesionales para compresores de aire</h2>
+      <p class="intro">Brindamos asistencia técnica para equipos de diferentes capacidades, marcas y usos. Nuestro enfoque es detectar fallas, recuperar rendimiento y mantener el equipo trabajando de forma segura.</p>
+      <div class="cards">
+        <article class="card"><div class="icon"><i class="fas fa-gauge-high"></i></div><h3>Recarga de compresores</h3><p>Recarga del equipo, revisión de presión, fugas, funcionamiento general y rendimiento del sistema.</p></article>
+        <article class="card"><div class="icon"><i class="fas fa-screwdriver-wrench"></i></div><h3>Mantenimiento</h3><p>Mantenimiento preventivo y correctivo para evitar daños mayores, paradas inesperadas y pérdida de presión.</p></article>
+        <article class="card"><div class="icon"><i class="fas fa-gears"></i></div><h3>Reparación</h3><p>Corrección de fallas mecánicas, eléctricas, fugas, problemas de arranque, presión baja o ruido anormal.</p></article>
+        <article class="card"><div class="icon"><i class="fas fa-wrench"></i></div><h3>Instalación</h3><p>Instalación y puesta en marcha de compresores de aire para talleres, negocios, industrias y espacios técnicos.</p></article>
+        <article class="card"><div class="icon"><i class="fas fa-magnifying-glass-chart"></i></div><h3>Diagnóstico técnico</h3><p>Evaluación del estado del compresor, identificación de fallas y recomendaciones de reparación o mantenimiento.</p></article>
+        <article class="card"><div class="icon"><i class="fas fa-box-open"></i></div><h3>Venta de repuestos</h3><p>Repuestos, accesorios y componentes para diferentes tipos de compresores de aire.</p></article>
+      </div>
+    </section>
+
+    <section class="split" id="cobertura">
+      <div>
+        <p class="eyebrow">Cobertura</p>
+        <h2>Atendemos solicitudes en toda Colombia</h2>
+        <p>Contamos con punto de atención en Bogotá y asesoría para coordinar servicios de recarga, mantenimiento, reparación, instalación y repuestos en diferentes ciudades del país.</p>
+      </div>
+      <div class="location-box">
+        <h3>Datos de contacto</h3>
+        <p><strong>WhatsApp:</strong> 310 299 5655</p>
+        <p><strong>Dirección:</strong> Cl. 187 #46 - 55, Bogotá</p>
+        <p><strong>Cobertura:</strong> Toda Colombia</p><br>
+        <a class="btn" href="https://wa.me/573102995655?text=Hola%2C%20necesito%20servicio%20para%20un%20compresor%20de%20aire%20en%20Colombia" target="_blank"><i class="fab fa-whatsapp"></i> Escribir ahora</a>
+      </div>
+    </section>
+
+    <section class="section alt" id="solicitar">
+      <p class="eyebrow">Proceso fácil</p>
+      <h2>Cómo solicitar el servicio</h2>
+      <div class="steps">
+        <div class="step"><div><h3>Escríbenos por WhatsApp</h3><p>Indica tu ciudad, tipo de compresor y el servicio que necesitas.</p></div></div>
+        <div class="step"><div><h3>Envía fotos o videos</h3><p>Comparte imágenes del equipo, placa técnica, falla visible o sonido del problema.</p></div></div>
+        <div class="step"><div><h3>Recibe diagnóstico inicial</h3><p>Te orientamos sobre la posible causa y el servicio recomendado.</p></div></div>
+        <div class="step"><div><h3>Agenda atención o cotización</h3><p>Coordinamos la solución más adecuada: recarga, mantenimiento, reparación, instalación o repuestos.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="tipos">
+      <p class="eyebrow">Equipos que atendemos</p>
+      <h2>Tipos de compresores</h2>
+      <div class="cards">
+        <article class="card"><div class="icon"><i class="fas fa-industry"></i></div><h3>Compresores industriales</h3><p>Equipos para plantas, procesos productivos, líneas neumáticas y alto uso operativo.</p></article>
+        <article class="card"><div class="icon"><i class="fas fa-car"></i></div><h3>Compresores para talleres</h3><p>Soluciones para talleres automotrices, pintura, montallantas y herramientas neumáticas.</p></article>
+        <article class="card"><div class="icon"><i class="fas fa-building"></i></div><h3>Compresores comerciales</h3><p>Equipos para negocios, mantenimiento, servicios técnicos y aplicaciones profesionales.</p></article>
+        <article class="card"><div class="icon"><i class="fas fa-screwdriver"></i></div><h3>Compresores de pistón</h3><p>Revisión, mantenimiento y reparación de equipos de uso común y alta demanda.</p></article>
+        <article class="card"><div class="icon"><i class="fas fa-fan"></i></div><h3>Compresores de tornillo</h3><p>Atención técnica para sistemas continuos, industriales y de mayor capacidad.</p></article>
+        <article class="card"><div class="icon"><i class="fas fa-thumbtack"></i></div><h3>Equipos portátiles</h3><p>Diagnóstico y soporte para compresores pequeños, móviles o de uso profesional liviano.</p></article>
+      </div>
+    </section>
+
+    <section class="section alt" id="recomendaciones">
+      <p class="eyebrow">Cuidado del equipo</p>
+      <h2>Recomendaciones</h2>
+      <div class="cards two">
+        <article class="card"><h3>Revisa la presión</h3><p>Si el compresor tarda más de lo normal en cargar o pierde presión rápido, puede tener fugas o desgaste interno.</p></article>
+        <article class="card"><h3>No ignores ruidos extraños</h3><p>Golpes, vibraciones fuertes o sonidos anormales pueden indicar daños que deben revisarse a tiempo.</p></article>
+        <article class="card"><h3>Programa mantenimiento</h3><p>Un mantenimiento preventivo evita fallas costosas y ayuda a conservar el rendimiento del equipo.</p></article>
+        <article class="card"><h3>Usa repuestos adecuados</h3><p>Instalar componentes incorrectos puede afectar presión, seguridad y vida útil del compresor.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details><summary>¿Atienden fuera de Bogotá?</summary><p>Sí. Atendemos solicitudes en toda Colombia y coordinamos la mejor forma de prestar el servicio según la ciudad y el tipo de equipo.</p></details>
+        <details><summary>¿Qué datos debo enviar para cotizar?</summary><p>Ciudad, tipo de compresor, marca si la conoces, fotos del equipo, descripción de la falla y el servicio que necesitas.</p></details>
+        <details><summary>¿Hacen diagnóstico técnico?</summary><p>Sí. Revisamos síntomas como baja presión, fugas, fallas de arranque, ruidos, calentamiento o bajo rendimiento.</p></details>
+        <details><summary>¿Venden repuestos?</summary><p>Sí. Ofrecemos repuestos y accesorios para diferentes tipos de compresores de aire.</p></details>
+        <details><summary>¿Puedo solicitar servicio por WhatsApp?</summary><p>Sí. El canal principal de atención es WhatsApp al 310 299 5655.</p></details>
+      </div>
+    </section>
+
+    <section class="section alt" id="formulario">
+      <p class="eyebrow">Formulario</p>
+      <h2>Solicita una cotización</h2>
+      <div class="contact-grid">
+        <div class="location-box">
+          <h3>Contacto directo</h3>
+          <p><strong>WhatsApp:</strong> 310 299 5655</p>
+          <p><strong>Dirección:</strong> Cl. 187 #46 - 55, Bogotá</p>
+          <p><strong>Servicio:</strong> Toda Colombia</p><br>
+          <div class="actions">
+            <a class="btn" href="https://wa.me/573102995655?text=Hola%2C%20quiero%20solicitar%20una%20cotizaci%C3%B3n%20para%20mi%20compresor%20de%20aire" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a class="btn secondary" href="#inicio">Volver arriba</a>
+          </div>
+        </div>
+        <form class="form-box" id="contactForm">
+          <input type="text" id="nombre" placeholder="Nombre" required>
+          <input type="text" id="ciudad" placeholder="Ciudad" required>
+          <select id="servicio" required>
+            <option value="">Selecciona un servicio</option>
+            <option>Recarga de compresores</option>
+            <option>Mantenimiento</option>
+            <option>Reparación</option>
+            <option>Instalación</option>
+            <option>Diagnóstico técnico</option>
+            <option>Venta de repuestos</option>
+          </select>
+          <textarea id="mensaje" placeholder="Describe el equipo o la falla" required></textarea>
+          <button class="btn" type="submit"><i class="fab fa-whatsapp"></i> Enviar por WhatsApp</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="cta" id="contacto">
+      <h2>¿Necesitas recargar, reparar o mantener tu compresor?</h2>
+      <p>Escríbenos y recibe asesoría rápida para tu equipo en cualquier ciudad de Colombia.</p>
+      <a class="btn dark" href="https://wa.me/573102995655?text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre%20recarga%2C%20mantenimiento%2C%20reparaci%C3%B3n%20o%20repuestos%20para%20compresores%20de%20aire" target="_blank"><i class="fab fa-whatsapp"></i> Hablar por WhatsApp</a>
+    </section>
+  </main>
+
+  <a class="floating-whatsapp" href="https://wa.me/573102995655?text=Hola%2C%20necesito%20servicio%20para%20compresor%20de%20aire" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+
+  <footer>
+    <p>© Recarga de Compresores de Aire. Bogotá, Colombia. Servicio en toda Colombia.</p>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    const contactForm = document.getElementById('contactForm');
+
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('active'));
+    });
+
+    contactForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const nombre = document.getElementById('nombre').value.trim();
+      const ciudad = document.getElementById('ciudad').value.trim();
+      const servicio = document.getElementById('servicio').value;
+      const mensaje = document.getElementById('mensaje').value.trim();
+      const texto = `Hola, soy ${nombre}. Estoy en ${ciudad}. Necesito: ${servicio}. Detalle: ${mensaje}`;
+      const url = `https://wa.me/573102995655?text=${encodeURIComponent(texto)}`;
+      window.open(url, '_blank');
+    });
+  </script>
+</body>
+</html>
